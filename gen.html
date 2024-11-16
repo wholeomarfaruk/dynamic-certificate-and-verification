@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PDF Generator with html2pdf.js</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            
+          
+           
+         
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+        .container {
+            text-align: center;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+        h1 {
+            color: #333;
+        }
+        p {
+            color: #555;
+            font-size: 18px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+    <style>
+        @font-face {
+            font-family: 'Times New Roman';
+            src: url('fonts/times-new-roman.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        @font-face {
+            font-family: 'Times New Roman';
+            src: url('fonts/times-new-roman-italic.ttf') format('truetype');
+            font-weight: normal;
+            font-style: italic;
+        }
+
+        @font-face {
+            font-family: 'Times New Roman';
+            src: url('fonts/times-new-roman-bold.ttf') format('truetype');
+            font-weight: bold;
+            font-style: normal;
+        }
+
+        @font-face {
+            font-family: 'Times New Roman';
+            src: url('fonts/times-new-roman-bold-italic.ttf') format('truetype');
+            font-weight: bold;
+            font-style: italic;
+        }
+
+        @font-face {
+            font-family: 'certificate font';
+            src: url(fonts/certificate-font.ttf);
+        }
+
+        @font-face {
+            font-family: 'Monotype Corsiva';
+            src: url(fonts/Monotype-Corsiva.ttf);
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+      
+            
+            align-items: center;
+            background-color: #f5f5f5;
+            font-family: Arial, sans-serif;
+            /* padding: 20px; */
+        }
+
+        .certificate {
+            margin: 0 auto;
+            width: 1100px;
+            /* A4 landscape width in pixels */
+            height: 772px;
+            /* A4 landscape height in pixels */
+            padding: 70px;
+            /* Adjust padding as needed */
+            border: 1px solid #000;
+
+            background-color: #fff;
+            text-align: center;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .flexbox {
+            padding: 0 12px;
+            display: flex;
+            justify-content: space-between;
+
+
+        }
+
+       
+
+        .header {
+            margin-bottom: 5px;
+        }
+
+        .header .company-name {
+            font-size: 1.8em;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .header .grading-system {
+            font-size: 0.9em;
+            text-align: left;
+            margin: 5px 0;
+        }
+
+        .grading-system p {
+            font-size: 16px;
+            margin: 4px 0;
+        }
+
+        .title {
+            text-transform: uppercase;
+            font-weight: bold;
+            margin: 3px 0;
+            position: relative;
+        }
+
+        .title .logo {
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 0;
+        }
+
+        .registration {
+            font-size: 0.9em;
+            margin-bottom: 10px;
+            font-size: 20px;
+
+        }
+
+        .border-bottom {
+            margin-top: -6px !important;
+            border-bottom: 1px dotted black;
+            background:
+
+                linear-gradient(to right, rgb(0, 0, 0) 50%, transparent 0%) bottom repeat-x;
+
+            background-size: 10px 1px, 1px 10px;
+        }
+
+        .certificate-details {
+            text-align: left;
+            margin: 5px 0;
+            font-size: 1rem;
+        }
+
+        .certificate-details p {
+            margin-top: 0;
+            margin-bottom: 0;
+        }
+
+        .certificate_name {
+            border-radius: 50px;
+            background-color: #24B34A;
+            color: #fff;
+            width: fit-content;
+            margin: 0 auto;
+            font-size: 35px;
+            font-weight: 700;
+            padding: 1px 25px;
+        }
+
+        .content {
+
+            font-size: 1em;
+            line-height: 1.6;
+            text-align: left;
+            padding: 0 12px;
+        }
+
+        .footer {
+
+            margin-top: 5px;
+        }
+
+        .footer .flexbox {
+
+            align-items: center !important;
+        }
+
+        .footer .sign {
+            text-align: center;
+            width: 100%;
+        }
+
+        .footer .sign .signature {
+            border-top: 1px solid #000;
+            padding-top: 5px;
+            font-size: 16px;
+            line-height: 22px;
+
+        }
+
+        .high-light {
+            font-weight: 600;
+            color: #292929;
+            font-family: 'Times New Roman';
+            font-style: italic;
+        }
+
+        .certificate-font {
+            font-family: 'certificate font', Arial, sans-serif;
+        }
+
+        .monotype-corsiva {
+            font-family: 'Monotype Corsiva';
+            font-size: 22px;
+            font-weight: 400;
+            color: #292929;
+        }
+
+        svg {
+            display: block;
+        }
+
+        .textbox {
+            line-height: 29px;
+            display: flex;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="certificate"
+        style="background-image: url(upload/certificate/cer-blank.png); background-size: 100% 100%;">
+        <!-- Header -->
+        <div class="header">
+
+
+
+
+
+
+        </div>
+
+
+        <!-- Main Content -->
+        <div class="content">
+
+         
+
+
+        </div>
+
+        <!-- Footer with Signatures -->
+        <div class="footer">
+           
+           
+
+
+        </div>
+    </div>
+<div class="container">
+    <h1>Welcome to PDF Generator</h1>
+    <p>This content will be converted into a PDF.</p>
+    <button id="download">Download PDF</button>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.2/html2pdf.bundle.js"></script>
+<script>
+    // Get the button element
+    const button = document.getElementById('download');
+
+    // Set up the click event to generate the PDF
+    button.addEventListener('click', () => {
+        const element = document.querySelector('.certificate'); // The content to be converted
+        const options = {
+            filename: 'generated-file.pdf',  // Name of the generated PDF
+            margin: 1,
+            html2canvas: { scale: 10 },       // Set resolution
+            jsPDF: { unit: 'mm', format: 'a4', orientation: 'landscape' }  // Paper size
+        };
+
+        // Generate the PDF
+        html2pdf().from(element).set(options).save();
+    });
+</script>
+
+</body>
+</html>

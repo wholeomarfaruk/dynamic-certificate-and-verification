@@ -1,0 +1,434 @@
+
+<!-- certificate1 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Certificate Template</title>
+    <style>
+        @font-face {
+            font-family: 'Times New Roman';
+            src: url('fonts/times-new-roman.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        @font-face {
+            font-family: 'Times New Roman';
+            src: url('fonts/times-new-roman-italic.ttf') format('truetype');
+            font-weight: normal;
+            font-style: italic;
+        }
+
+        @font-face {
+            font-family: 'Times New Roman';
+            src: url('fonts/times-new-roman-bold.ttf') format('truetype');
+            font-weight: bold;
+            font-style: normal;
+        }
+
+        @font-face {
+            font-family: 'Times New Roman';
+            src: url('fonts/times-new-roman-bold-italic.ttf') format('truetype');
+            font-weight: bold;
+            font-style: italic;
+        }
+
+        @font-face {
+            font-family: 'certificate font';
+            src: url(fonts/certificate-font.ttf);
+        }
+
+        @font-face {
+            font-family: 'Monotype Corsiva';
+            src: url(fonts/Monotype-Corsiva.ttf);
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #f5f5f5;
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+
+        .certificate {
+            width: 1055px;
+            /* A4 landscape width in pixels */
+            height: 792px;
+            /* A4 landscape height in pixels */
+            padding: 70px;
+            /* Adjust padding as needed */
+            border: 1px solid #000;
+
+            background-color: #fff;
+            text-align: center;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .flexbox {
+            padding: 0 12px;
+            display: flex;
+            justify-content: space-between;
+
+
+        }
+
+       
+
+        .header {
+            margin-bottom: 5px;
+        }
+
+        .header .company-name {
+            font-size: 1.8em;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .header .grading-system {
+            font-size: 0.9em;
+            text-align: left;
+            margin: 5px 0;
+        }
+
+        .grading-system p {
+            font-size: 16px;
+            margin: 4px 0;
+        }
+
+        .title {
+            text-transform: uppercase;
+            font-weight: bold;
+            margin: 3px 0;
+            position: relative;
+        }
+
+        .title .logo {
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 0;
+        }
+
+        .registration {
+            font-size: 0.9em;
+            margin-bottom: 10px;
+            font-size: 20px;
+
+        }
+
+        .border-bottom {
+            margin-top: -6px !important;
+            background:
+
+                linear-gradient(to right, rgb(0, 0, 0) 50%, transparent 0%) bottom repeat-x;
+
+            background-size: 10px 1px, 1px 10px;
+        }
+
+        .certificate-details {
+            text-align: left;
+            margin: 5px 0;
+            font-size: 1rem;
+        }
+
+        .certificate-details p {
+            margin-top: 0;
+            margin-bottom: 0;
+        }
+
+        .certificate_name {
+            border-radius: 50px;
+            background-color: #24B34A;
+            color: #fff;
+            width: fit-content;
+            margin: 0 auto;
+            font-size: 35px;
+            font-weight: 700;
+            padding: 1px 25px;
+        }
+
+        .content {
+
+            font-size: 1em;
+            line-height: 1.6;
+            text-align: left;
+            padding: 0 12px;
+        }
+
+        .footer {
+
+            margin-top: 5px;
+        }
+
+        .footer .flexbox {
+
+            align-items: center !important;
+        }
+
+        .footer .sign {
+            text-align: center;
+            width: 100%;
+        }
+
+        .footer .sign .signature {
+            border-top: 1px solid #000;
+            padding-top: 5px;
+            font-size: 16px;
+            line-height: 22px;
+
+        }
+
+        .high-light {
+            font-weight: 600;
+            color: #292929;
+            font-family: 'Times New Roman';
+            font-style: italic;
+        }
+
+        .certificate-font {
+            font-family: 'certificate font', Arial, sans-serif;
+        }
+
+        .monotype-corsiva {
+            font-family: 'Monotype Corsiva';
+            font-size: 22px;
+            font-weight: 400;
+            color: #292929;
+        }
+
+        svg {
+            display: block;
+        }
+
+        .textbox {
+            line-height: 29px;
+            display: flex;
+            align-items: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="certificate"
+        style="background-image: url(http://localhost/certificate-verification/upload/certificate/cer-blank.png); background-size: 100% 100%;">
+
+        <table>
+            <tr>
+                <td></td>
+                <td></td>
+            </tr>
+        </table>
+        <!-- Header -->
+        <div class="header">
+            <div class="title ">
+                <!-- SVG for Curved Text -->
+                <svg class="pb-5" viewBox="0 0 30 6" xmlns="http://www.w3.org/2000/svg">
+                    <path id="MyPath" fill="none" stroke-width=".1" d="M 0 5 Q 15 -5 30 5" pathLength="2" />
+                    <text class=" is-4" font-size="1.6" dominant-baseline="hanging" text-anchor="middle">
+                        <textPath href="#MyPath" startOffset="1">
+                            <!-- SUNSEA TECHNICAL TRAINING CENTRE -->
+                        </textPath>
+                    </text>
+                </svg>
+                <div class="logo">
+                    <!-- <img src="http://localhost/certificate-verification/upload/certificate/logo.png" width="140" height="120" alt="" srcset=""> -->
+                </div>
+
+            </div>
+
+            <div class="flexbox" style="margin-top: 18px;">
+                <div class="leftbox" style="width: 33.33%;">
+                    <div class="grading-system">
+                        <!-- <strong class="high-light" style="font-style: normal;"><span style="text-transform: uppercase; ">Grading System:</span> -->
+                            <!-- <p>A+ = 80% & Above</p>
+                            <p>A &nbsp;&nbsp;= 70% & Above</p>
+                            <p>B &nbsp;&nbsp;= 60% & Above</p>
+                            <p>C &nbsp;&nbsp;= 50% & Above</p> -->
+                        <!-- </strong> -->
+                    </div>
+                </div>
+                <div class="middilebox" style="width: 35.33%;">
+                    <div class="company-details" style="margin-top: 16px; ">
+                        <div  style="font-size: 13px; font-weight: 500; font-family: 'Times New Roman', Times, serif; margin-bottom: 2px;" ></div>
+                        <div style="font-size: 12px; font-weight: 500; font-family: 'Times New Roman', Times, serif; margin-bottom: 2px;"></div>
+                        <div class="registration"><strong class="high-light" style="font-style: normal; margin-bottom: 2px; "> T/D/017004</strong></div>
+                        <!-- <div class="certificate_name certificate-font" style="font-weight: 500;">Test Certificate</div> -->
+                    </div>
+                </div>
+                <div class="ritightbox" style="width: 15.33%;">
+
+                    <!-- Certificate Information -->
+                    <div class="certificate-details" style="text-align: left; padding-right: 35px;">
+                       
+                          
+                              
+                                <p class="" style="margin-bottom: 0; margin-top: 0; line-height: 25px; ">
+                                    <strong class="high-light">&nbsp; 1071</strong>
+                       <br>
+                              
+                                    <strong class="high-light">&nbsp; 109131</strong>
+                                    <br>
+                             
+                                    <strong class="high-light">&nbsp; 10131291</strong>
+                              
+                                    <br>
+                                    <strong class="high-light">&nbsp; 09.11.2024</strong>
+                                </p>
+                          
+
+                       
+
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
+        </div>
+
+
+        <!-- Main Content -->
+        <div class="content">
+
+            <div class="textbox">
+                <div class="monotype-corsiva" style="margin-bottom: 0; margin-top: 0; ">
+                    &nbsp;
+                </div>
+                <div class="t" style="margin-bottom: 0; margin-top: 0; flex: 1; ">
+                    &nbsp;&nbsp; <strong class="high-light">KOWSAR AHMEED</strong>
+                </div>
+            </div>
+            <div class="textbox">
+                <div class="monotype-corsiva" style="margin-bottom: 0; margin-top: 0; ">
+                     &nbsp;
+                </div>
+                <div class="t" style="margin-bottom: 0; margin-top: 0; flex: 1; ">
+                    &nbsp;&nbsp; <strong class="high-light">ROKON MIAH</strong>
+                </div>
+            </div>
+            <div class="textbox">
+                <div class="monotype-corsiva" style="margin-bottom: 0; margin-top: 0; ">
+                     &nbsp;
+                </div>
+                <div class="t" style="margin-bottom: 0; margin-top: 0;  flex: 1; ">
+                    &nbsp;&nbsp; <strong class="high-light">LAKI BEGUM</strong>
+                </div>
+            </div>
+            <div class="textbox">
+                <div class="monotype-corsiva" style="margin-bottom: 0; margin-top: 0; ">
+                   &nbsp;
+                </div>
+                <div class="t" style="margin-bottom: 0; margin-top: 0;  flex: 1; ">
+                    &nbsp;&nbsp; <strong class="high-light">FCAW (WELDER)</strong>
+                </div>
+            </div>
+            <div class="textbox">
+                <div class="textbox" style="display: flex;  width: 70%;">
+
+                    <div class="monotype-corsiva" style="margin-bottom: 0; margin-top: 0; ">
+                      &nbsp;
+                    </div>
+                    <div class="t" style="margin-bottom: 0; margin-top: 0;  flex: 1; ">
+                        &nbsp; <strong class="high-light">SUNSEA TECHNICAL TRAINING CENTRE</strong>
+                    </div>
+                </div>
+                <div class="textbox" style="display: flex; width: 30%;">
+
+                    <div class="monotype-corsiva" style="margin-bottom: 0; margin-top: 0; ">
+                        &nbsp;  &nbsp;
+                    </div>
+                    <div class="t" style="margin-bottom: 0; margin-top: 0;  flex: 1; ">
+                        &nbsp;&nbsp; <strong class="high-light">1167</strong>
+                    </div>
+                </div>
+
+
+            </div>
+            <div class="textbox">
+                <div class="textbox" style="display: flex;  width: 40%;">
+
+                    <div class="monotype-corsiva" style="margin-bottom: 0; margin-top: 0; ">
+                        &nbsp;
+                    </div>
+                    <div class="t" style="margin-bottom: 0; margin-top: 0;  flex: 1; ">
+                        &nbsp;&nbsp; <strong class="high-light"> 09.11.2024</strong>
+                    </div>
+                </div>
+                <div class="textbox" style="display: flex; width: 30%;">
+
+                    <div class="monotype-corsiva" style="margin-bottom: 0; margin-top: 0; ">
+                        &nbsp; &nbsp;
+                    </div>
+                    <div class="t" style="margin-bottom: 0; margin-top: 0; flex: 1; ">
+                        &nbsp;&nbsp; <strong class="high-light">(B)</strong>
+                    </div>
+                </div>
+                <div class="textbox" style="display: flex; width: 30%;">
+
+
+                    <div class="monotype-corsiva" style="margin-bottom: 0; margin-top: 0; ">
+                        &nbsp;  &nbsp;
+                    </div>
+                    <div class="t" style="margin-bottom: 0; margin-top: 0; flex: 1; ">
+                        &nbsp;&nbsp; <strong class="high-light">FIT</strong>
+                    </div>
+                </div>
+
+
+            </div>
+            <div class="textbox">
+
+                <div class="monotype-corsiva" style="margin-bottom: 0; margin-top: 0; ">
+                    &nbsp;
+                </div>
+
+            </div>
+
+
+        </div>
+
+        <!-- Footer with Signatures -->
+        <div class="footer">
+            <div class="flexbox">
+                <div class="leftbox">
+                    <div class="sign">
+                        <img src="http://localhost/certificate-verification/upload/certificate/instructor-sign.png" alt="" srcset="" style="width: max-content;">
+                        <div class="signature">
+                            Chief Instructor<br>
+                            Training & Education
+                        </div>
+                    </div>
+                </div>
+                <div class="middilebox">
+                    <div class="qr-code">
+                        <img src="http://localhost/certificate-verification/upload/certificate/qr_code.png" alt="" width="100" height="100">
+                    </div>
+                </div>
+                <div class="ritightbox">
+
+                    <div class="sign">
+                        <img src="http://localhost/certificate-verification/upload/certificate/senior_manager.png" alt="" srcset="" style="width: max-content;">
+                        <div class="signature">
+                            Senior Manager<br>
+                            Training & Education</div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+</body>
+
+</html>
