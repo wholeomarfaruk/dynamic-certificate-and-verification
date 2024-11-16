@@ -23,8 +23,8 @@ Update database connection settings:
 Open the db.php file and modify the database connection parameters if necessary:
 php
 Copy code
-  ```bash
-  $db = mysqli_connect('localhost', 'root', '', 'certificate');
+
+$db = mysqli_connect('localhost', 'root', '', 'certificate');
 Make sure to have PHP 7.0 or higher installed on your server.
 
 ## Usage
