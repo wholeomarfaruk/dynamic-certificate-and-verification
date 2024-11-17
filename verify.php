@@ -25,21 +25,34 @@ if (
   while ($row = mysqli_fetch_assoc($studentData)) {
     $student = $row;
   }
-  $written = (float) (isset($student['written_mark'])) ? htmlspecialchars($student['written_mark']) : 0;
-  $practical = (float) (isset($student['practical_mark'])) ? htmlspecialchars($student['practical_mark']) : 0;
-  $viva = (float) (isset($student['viva_mark'])) ? htmlspecialchars($student['viva_mark']) : 0;
-  $total_sum = $written + $practical + $viva;
-  // echo "<pre>";
-  $dataStatus = true;
+  $written = isset($student['written_mark']) 
+  ? (float) $student['written_mark'] 
+  : 0;
+
+$practical = isset($student['practical_mark']) 
+  ? (float) $student['practical_mark'] 
+  : 0;
+
+$viva = isset($student['viva_mark'])  
+  ? (float) $student['viva_mark'] 
+  : 0;
+
+$total_sum = $written + $practical + $viva;
+
+$dataStatus = true;
+
   // print_r($student);
   // print_r($company);
 
-  function MMYYYY($date){
-    if(!empty($date)){
-      $dates = new DateTime($date);
-      $result = $dates->format('d-M-Y');
-      return $result;
+  function sessionDate($date){
+    if (strtotime($date)>0) {
+      if(!empty($date)){
+        $dates = new DateTime($date);
+        $result = $dates->format('d-M-Y');
+        return $result;
+      }
     }
+
     return '';
   }
 }
@@ -319,8 +332,8 @@ if (
             <td>Mother's Name</td>
             <td><?php echo (isset($student['mother_name'])) ? htmlspecialchars($student['mother_name']) : ''; ?></td>
             <td>Session</td>
-            <td><?php echo (isset($student['session_start'])) ? MMYYYY($student['session_start'] ): ''; ?> to
-              <?php echo (isset($student['session_end'])) ? MMYYYY($student['session_end'] ) : ''; ?></td>
+            <td><?php echo (isset($student['session_start']) && !empty(sessionDate($student['session_start'] ))) ? sessionDate($student['session_start'] )." to ": ''; ?>
+              <?php echo (isset($student['session_end']) && !empty($student['session_start'])) ? sessionDate($student['session_end'] ) : ''; ?></td>
           </tr>
         </tbody>
       </table>

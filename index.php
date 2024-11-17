@@ -44,7 +44,7 @@ include "header.php";
         <div class="row">
             <div class="col-md-8 col-lg-6">
                 <div class="banner-titel">
-                    <h1 class="titel">SUNSEA TECHNICAL TREINING CENTRE</h1>
+                    <h1 class="titel">SUNSEA TECHNICAL TRAINING CENTRE</h1>
 
                 </div>
             </div>

@@ -24,7 +24,7 @@ if (isset($_GET['roll']) && isset($_GET['reg']) && !empty($_GET['reg']) && !empt
 // echo  $rowNum2;
 // print_r($company);
 if ($rowNum === 1) {
-    $license = "T/D/01704";
+    $license = $company['institute_reg_no'];
     $serial = $data['serial_no'];
     $role = $roll_no;
     $reg = $reg_no;

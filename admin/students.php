@@ -203,10 +203,20 @@ if ($do == 'manage') {
             exit;
         }
     }
-    $written = (float) (isset($student['written_mark'])) ? htmlspecialchars($student['written_mark']) : 0;
-    $practical = (float) (isset($student['practical_mark'])) ? htmlspecialchars($student['practical_mark']) : 0;
-    $viva = (float) (isset($student['viva_mark'])) ? htmlspecialchars($student['viva_mark']) : 0;
-    $total_sum = $written + $practical + $viva;
+    $written = isset($student['written_mark']) 
+    ? (float) $student['written_mark'] 
+    : 0;
+  
+  $practical = isset($student['practical_mark']) 
+    ? (float) $student['practical_mark'] 
+    : 0;
+  
+  $viva = isset($student['viva_mark'])  
+    ? (float) $student['viva_mark'] 
+    : 0;
+  
+  $total_sum = $written + $practical + $viva;
+
     // Datatable start
     ?>
     <div class="page-heading">
@@ -649,7 +659,7 @@ if ($do == 'manage') {
                     }
                 }
             }
-
+           
             ?>
 
 
@@ -1001,8 +1011,8 @@ if ($do == 'manage') {
         $serial_no = $_POST['serial_no'];
         $roll_no = $_POST['roll_no'];
         $reg_no = $_POST['reg_no'];
-        $test_issue_date = $_POST['issue_date'];
-        $course_issue_date = $_POST['issue_date'];
+        $test_issue_date = $_POST['test_issue_date'];
+        $course_issue_date = $_POST['course_issue_date'];
         $st_status = $_POST['st_status'];
         $written_mark = $_POST['written_mark'];
         $practical_mark = $_POST['practical_mark'];
