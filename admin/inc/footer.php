@@ -4,8 +4,8 @@
             <p>2024 &copy; Sunsea Overseas Training Center</p>
         </div>
         <div class="float-end">
-            <p>Crafted with <span class="text-danger"><i class="bi bi-heart"></i></span> by <a
-                    href="https://omars-portfolio.elspoint.com" target="_blank" style="color: #6c757d; font-weight: 600" >Md. Omar Faruk</a></p>
+            <p>Developed by <span class="text-danger"><i class="bi bi-heart"></i></span> by <a
+                    href="http://alimuzahid.com/" target="_blank" style="color: #6c757d; font-weight: 600" >Ali Muzahid </a></p>
         </div>
     </div>
 </footer>

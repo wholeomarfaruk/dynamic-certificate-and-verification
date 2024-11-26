@@ -6,9 +6,17 @@ include "header.php";
 <style>
     
 #banner{
-    background: url(images/metting.jpg) no-repeat 0 0;
+    background: url(images/banner-1.jpg) no-repeat 0 0;
     background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    padding: 5rem 0;
 }
+/* @media screen and (min-width: 768px) {
+    #banner{
+    background-position: top center;
+    }
+} */
 .banner-titel h1{
     background: rgba(240, 243, 243, 0.6);
     padding: 10px;
@@ -32,19 +40,24 @@ include "header.php";
      cursor: pointer;
 }
 .verify-box{
-    width: 70%;
+    width: 40%;
     box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.05) 0px 8px 32px;
     padding: 20px;
-   
+    margin: auto;
+}
+@media screen and (max-width: 768px) {
+    .verify-box{
+        width: 95%;
+    }
 }
 </style>
 
-<div id="banner" class="py-5">
+<div id="banner" class="">
     <div class="container">
         <div class="row">
-            <div class="col-md-8 col-lg-6">
+            <div class="col-md-8 col-lg-8 ">
                 <div class="banner-titel">
-                    <h1 class="titel">SUNSEA TECHNICAL TRAINING CENTRE</h1>
+                    <h1 class="titel py-5 px-3">SUNSEA OVERSEAS TRAINING CENTRE</h1>
 
                 </div>
             </div>
